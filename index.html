@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café Soltan</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index2.css">
   </head>
   <body>
     <section class="pre-header">
       <div>
-        <img src="/soltan.png" alt="pre-header image" />
+        <img src="soltan.png" alt="pre-header image" />
       </div>
     </section>
     <header>
@@ -25,11 +26,11 @@
             <a href="#contact" class="">contact us</a>
           </div>
         </nav>
-        <nav class="user-log">
-          <button>button1</button>
-          <button>button2</button>
-          <button>button3</button>
-        </nav>
+        <nav class="header-nav-buttons">
+          <button class="register-button" id="registerbtn" onclick="openFormRegister()">register</button>
+          <button class="logout-button" id="logoutbtn" onclick="logout()" >logout</button>
+          <button class="open-button" id="loginbtn" onclick="openFormLogin()">login</button>
+      </nav>
       </div>
     </header>
     <section class="hero">
@@ -43,9 +44,15 @@
         <div class="card">
           <h1 class="article-title">arabica</h1>
           <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
+            <img src="coffee-cup-on-table-top.jpg" alt="nasba card img" />
           </div>
-          <p class="article-description">Coffea arabica, also known as the Arabian coffee, "coffee shrub of Arabia", "mountain coffee" or "arabica coffee", is a species of Coffea. It is believed to be the first species of coffee to be cultivated, and is the dominant cultivar, representing about 60% of global production</p>
+          <p class="article-description">
+            Coffea arabica, also known as the Arabian coffee, "coffee shrub of
+            Arabia", "mountain coffee" or "arabica coffee", is a species of
+            Coffea. It is believed to be the first species of coffee to be
+            cultivated, and is the dominant cultivar, representing about 60% of
+            global production
+          </p>
           <div class="article-flous container">
             <h4>50tnd</h4>
             <button>add to cart</button>
@@ -54,42 +61,36 @@
         <div class="card">
           <h1 class="article-title">arabica</h1>
           <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
+            <img src="coffee-cup-on-table-top.jpg" alt="nasba card img" />
           </div>
-          <p class="article-description">description</p>
-          <div class="article-flous">50 dinars</div>
+          <p class="article-description">
+            Coffea arabica, also known as the Arabian coffee, "coffee shrub of
+            Arabia", "mountain coffee" or "arabica coffee", is a species of
+            Coffea. It is believed to be the first species of coffee to be
+            cultivated, and is the dominant cultivar, representing about 60% of
+            global production
+          </p>
+          <div class="article-flous container">
+            <h4>50tnd</h4>
+            <button>add to cart</button>
+          </div>
         </div>
         <div class="card">
           <h1 class="article-title">arabica</h1>
           <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
+            <img src="coffee-cup-on-table-top.jpg" alt="nasba card img" />
           </div>
-          <p class="article-description">description</p>
-          <div class="article-flous">50 dinars</div>
-        </div>
-        <div class="card">
-          <h1 class="article-title">arabica</h1>
-          <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
+          <p class="article-description">
+            Coffea arabica, also known as the Arabian coffee, "coffee shrub of
+            Arabia", "mountain coffee" or "arabica coffee", is a species of
+            Coffea. It is believed to be the first species of coffee to be
+            cultivated, and is the dominant cultivar, representing about 60% of
+            global production
+          </p>
+          <div class="article-flous container">
+            <h4>50tnd</h4>
+            <button>add to cart</button>
           </div>
-          <p class="article-description">description</p>
-          <div class="article-flous">50 dinars</div>
-        </div>
-        <div class="card">
-          <h1 class="article-title">arabica</h1>
-          <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
-          </div>
-          <p class="article-description">description</p>
-          <div class="article-flous">50 dinars</div>
-        </div>
-        <div class="card">
-          <h1 class="article-title">arabica</h1>
-          <div class="card-img">
-            <img src="/coffee-cup-on-table-top.jpg" alt="nasba card img" />
-          </div>
-          <p class="article-description">description</p>
-          <div class="article-flous">50 dinars</div>
         </div>
       </div>
     </section>
@@ -177,6 +178,59 @@
         </div>
       </div>
     </footer>
-    <div class="after-footer">2020 copywrite</div>
+
+    <!--login register forms-->
+    <div id="reglogform">
+      <!--register form-->
+      <div class="form-register-popup" id="myFormRegister">
+          <form class="form-container">
+            <h1>Register</h1>
+  
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter your Adress" name="name" id="nameRegister" required>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="emailRegister" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="passwordRegister" required>
+  
+            <label for="adress"><b>Adress</b></label>
+            <input type="text" placeholder="Enter your Adress" name="adrss" id="adressRegister" required>
+        
+            <button type='button' id="registerSubmit" class="btn" onclick="register()" >Register</button>
+            <button type='button' class="btn cancel" onclick="closeFormRegister()">Close</button>
+          </form>
+        </div>
+      <!-- login form-->
+      <div class="form-login-popup" id="myFormLogin">
+          <form  class="form-container">
+            <h1>Login</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="emailLogin" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="passwordLogin" required>
+        
+            <button type='button'  id="LoginSubmit" class="btn" onclick="login()">Login</button>
+            <button type='button' class="btn cancel" onclick="closeFormLogin()">Close</button>
+          </form>
+        </div>
+      </div>
+      <!--/login register forms-->
+  
+      <!--after footer-->
+      <div class="after-footer">2020 copyright</div>
+      <!--cart thumb-->
+      <div class="cart-thumb-div">
+        <a href="#"
+          ><img class="cart-thumb" src="pngguru.com.png" alt="" /><span id="carted-items-number"
+            >0</span
+          ></a
+        >
+        <span id="userName"></span>
+      </div>
+      <script src="index.js"></script>
   </body>
 </html>
