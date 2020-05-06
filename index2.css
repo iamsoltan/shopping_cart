@@ -24,9 +24,6 @@
   /* The register popup form - hidden by default */
   .form-register-popup {
     display: none;
-    position: fixed;
-    top: 2%;
-    right: 40%;
     border: 3px solid #f1f1f1;
     z-index: 9;
     
@@ -48,9 +45,6 @@
   /* The popup form - hidden by default */
   .form-login-popup {
     display: none;
-    position: fixed;
-    top: 20%;
-    right: 40%;
     border: 3px solid #f1f1f1;
     z-index: 9;
 
@@ -111,6 +105,8 @@
     /* The modal2 (background) */
       display: none; /* Hidden by default */
       position: fixed; /* Stay in place */
+      justify-content: center;
+      align-items: center;
       z-index: 10000000; /* Sit on top */
       left: 0;
       top: 0;
@@ -121,3 +117,27 @@
       background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
       padding-top: 60px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .header-nav-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+
+  }
+  .logo-item{
+    order : 2;
+  }
+  #menuItem2{
+    padding: 0;
+    order: 1;
+  }
+  #menuItem2{
+    order: 3;
+  }

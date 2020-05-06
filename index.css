@@ -257,8 +257,8 @@ footer li {
     border-radius: 10px;
     padding: 1px;
   }
-@media only screen and (max-width: 500px) {
-  .cart-thumb {
+ only screen and (max-width: 500px) {
+  .c@mediaart-thumb {
     width: 50px;
   }
   .cart-thumb-div {
@@ -282,5 +282,6 @@ footer li {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+
 }

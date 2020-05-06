@@ -17,13 +17,16 @@ let lastUser = "not";
 function show(x) {
   x.style.display = "block";
 }
+function showFlex(x) {
+  x.style.display = "flex";
+}
 function hide(x) {
   x.style.display = "none";
 }
 
 // open and close of reg log forms
 function openFormLogin() {
-  show(reglogform);
+  showFlex(reglogform);
   hide(regform);
   show(logform);
 }
@@ -34,7 +37,7 @@ function closeFormLogin() {
 }
 
 function openFormRegister() {
-  show(reglogform);
+  showFlex(reglogform);
   show(regform);
   hide(logform);
 }
