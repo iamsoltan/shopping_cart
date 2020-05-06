@@ -238,10 +238,14 @@ function mydeleteRow(event) {
 }
 
 function updateTotal() {
+  document.getElementById("carted-items-number").innerHTML = addersIndex.length;
   let x = document.getElementById("cart-table");
   let sum = 0;
   for (let i = 1; i < x.rows.length - 1; i++) { sum += x.rows[i].cells[4].innerHTML * 1;}
   document.getElementById("mytotal").innerHTML = sum;
+  //
+
+
 }
 function disableButton(event) {
   event.target.disabled = true;
@@ -265,6 +269,7 @@ function addToCartList(event) {
       addersIndex.includes(i) === false
     ) {
       addersIndex.push(i);
+      updateTotal();
     }
   }
 }
